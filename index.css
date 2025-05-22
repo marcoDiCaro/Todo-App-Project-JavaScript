@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(235, 21%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  max-width: 600px;
+  width: 90%;
+}
+
+.title,
+.input-todo,
+.todo-text,
+.empty {
+  color: hsl(0, 0%, 98%);
+}
+
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.input-todo,
+.todo-box,
+.todo-footer {
+  background-color: hsl(235, 24%, 19%);
+}
+
+.input-todo {
+  font-size: 1.8rem;
+  display: block;
+  margin: 2.5rem auto;
+  padding: 1.6rem 3.2rem;
+  max-width: 500px;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.todo-box {
+  border-radius: 0.5rem;
+}
+
+.todo-text {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  cursor: pointer;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5);
+}
+
+.todo-text:hover {
+  background-color: hsl(235, 26%, 25%);
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.todo-footer-menu {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.total-items,
+.clear-completed,
+.menu-item {
+  color: hsl(234, 11%, 52%);
+}
+
+.total-items,
+.clear-completed {
+  font-size: 1.6rem;
+}
+
+.clear-completed,
+.menu-item {
+  cursor: pointer;
+}
+
+.clear-completed:hover,
+.menu-item:hover {
+  color: hsl(0, 0%, 98%);
+}
+
+.menu-item {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+.completed {
+  color: hsl(120, 100%, 75%);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.empty {
+  font-size: 1.8rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.elementoTodo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.remove {
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: #ff0000;
+}
+
+.notifica-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(120, 100%, 75%);
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+}
+
+.notifica-text {
+  color: #1a1a1a;
+  font-size: 1.6rem;
+}
+
+.remove-notifica {
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+/* Piccoli dispositivi (smartphone in verticale) */
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* Riduce la dimensione base del font */
+  }
+
+  .title {
+    font-size: 2.4rem; /* Riduce la dimensione del titolo */
+    letter-spacing: 0.5rem; /* Riduce lo spazio tra le lettere */
+  }
+
+  .input-todo {
+    font-size: 1.4rem; /* Riduce la dimensione del font dell'input */
+    padding: 1.2rem 2.4rem; /* Riduce il padding */
+  }
+
+  .todo-text {
+    font-size: 1.4rem; /* Riduce la dimensione del testo dei todo */
+    padding: 1.6rem 1rem; /* Riduce il padding dei todo */
+  }
+
+  .todo-footer {
+    flex-direction: column; /* Metti i menu del footer in colonna */
+    align-items: flex-start; /* Allinea gli elementi del footer a sinistra */
+  }
+
+  .todo-footer-menu {
+    flex-direction: column; /* Metti i menu del footer in colonna */
+    margin-top: 1rem; /* Aggiungi un margine superiore */
+  }
+
+  .menu-item {
+    padding: 0.5rem 0; /* Riduce il padding per i menu */
+  }
+
+  .clear-completed {
+    margin-top: 1rem; /* Aggiungi margine sopra il pulsante "Clear Completed" */
+  }
+}
+
+/* Dispositivi tablet (tra 481px e 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* Riduce ulteriormente la dimensione base del font */
+  }
+
+  .title {
+    font-size: 2.8rem; /* Riduce la dimensione del titolo */
+    letter-spacing: 0.8rem; /* Riduce leggermente lo spazio tra le lettere */
+  }
+
+  .input-todo {
+    font-size: 1.6rem; /* Adatta la dimensione dell'input */
+    padding: 1.4rem 3rem; /* Riduce il padding dell'input */
+  }
+
+  .todo-text {
+    font-size: 1.5rem; /* Riduce la dimensione del testo dei todo */
+    padding: 1.8rem 1.2rem; /* Aggiusta il padding dei todo */
+  }
+
+  .todo-footer {
+    flex-direction: column; /* Metti i menu del footer in colonna */
+    align-items: flex-start; /* Allinea gli elementi del footer a sinistra */
+  }
+
+  .todo-footer-menu {
+    flex-direction: column; /* Metti i menu del footer in colonna */
+    margin-top: 1rem; /* Aggiungi margine sopra i menu */
+  }
+
+  .menu-item {
+    padding: 0.5rem 0; /* Riduce il padding per i menu */
+  }
+
+  .clear-completed {
+    margin-top: 1rem; /* Aggiungi margine sopra il pulsante "Clear Completed" */
+  }
+}
+
+/* Dispositivi desktop (schermi sopra 768px) */
+@media (min-width: 769px) {
+  .todo-footer {
+    flex-direction: row; /* Mostra i menu del footer in orizzontale */
+    justify-content: space-between; /* Distanza uguale tra gli elementi */
+  }
+
+  .todo-footer-menu {
+    flex-direction: row; /* Mostra i menu del footer in orizzontale */
+  }
+
+  .menu-item {
+    padding: 0.5rem 1rem; /* Aggiusta il padding dei menu per schermi più grandi */
+  }
+
+  .input-todo {
+    font-size: 1.8rem; /* Mantieni una dimensione più grande per input su desktop */
+    padding: 1.6rem 3.2rem; /* Mantieni il padding più largo */
+  }
+
+  .todo-text {
+    font-size: 1.6rem; /* Mantieni la dimensione del testo normale */
+    padding: 2rem 1rem; /* Mantieni il padding dei todo */
+  }
+}
